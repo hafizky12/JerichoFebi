@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+  background-image: url('Jerichofebi 2.jpg');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(5px);
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0; /* Tambahkan margin 0 untuk menghilangkan margin default */
+  padding: 20px; /* Tambahkan padding untuk jarak antar elemen */
+}
+
+/* Image Styles */
+#foto {
+  margin: 0 auto;
+  max-width: 100%; /* Atur ukuran gambar menjadi responsif */
+  height: auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px; /* Sesuaikan margin bottom */
+  max-width: 250px; /* Atur ukuran maksimum lebar gambar */
+  max-height: 250px; /* Atur ukuran maksimum tinggi gambar */
+}
+
+/* Text Styles */
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px; /* Perpendek jarak ke bawah */
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 5px; /* Perpendek jarak ke atas */
+}
+
+/* Play Button Styles */
+#playButton {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 18px; /* Perbesar ukuran font */
+  font-weight: bold; /* Buat teks bold */
+  height: 56px; /* Perbesar tinggi tombol */
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 30px; /* Perbesar padding */
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  touch-action: manipulation;
+  margin: 20px 0; /* Tambahkan margin atas dan bawah untuk tombol */
+}
+
+#playButton:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 56px; /* Sesuaikan dengan tinggi tombol */
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+#playButton:hover:after {
+  transform: translate(0, 0);
+}
+
+#playButton:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+/* Love Button Styles */
+#love-button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#loveButton {
+  width: 50px; /* Perbesar lebar menjadi 50px */
+  height: 50px; /* Perbesar tinggi menjadi 50px */
+  border-radius: 50%; /* Tetap gunakan border-radius: 50% untuk membuat tombol bulat */
+  background-color: transparent; /* Ubah background-color menjadi transparent */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Tambahkan border agar terlihat lebih jelas */
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+#loveButton:hover {
+  background-color: #E71C23;
+}
+
+#heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #E71C23; /* Ubah warna fill hati menjadi merah */
+  width: 25px; /* Perbesar lebar hati menjadi 25px */
+  height: 25px; /* Perbesar tinggi hati menjadi 25px */
+  transition: fill 0.3s ease; /* Tetap gunakan transisi fill */
+}
+
+#loveButton:hover #heart {
+  fill: #E71C23; /* Tetapkan warna fill hati saat tombol dihover */
+}
+
+#heart:hover {
+  opacity: 1; /* Saat dihover, ubah opacity menjadi 1 */
+}
+
+@keyframes heartOutlineAnimation {
+  0% {
+    stroke-width: 2px;
+  }
+  50% {
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-width: 2px;
+  }
+}
+
+#heart {
+  animation: none; /* Hapus animasi yang tidak dibutuhkan */
+}
+
+/* Responsiveness */
+/* Style for medium screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 35px; /* Sesuaikan ukuran font h1 */
+    margin-top: 15px; /* Perpendek jarak ke atas */
+    margin-bottom: 5px; /* Perpendek jarak ke bawah */
+  }
+
+  h3 {
+    font-size: 18px; /* Sesuaikan ukuran font h3 */
+    margin-top: 5px; /* Perpendek jarak ke atas */
+  }
+
+  #loveButton {
+    width: 40px; /* Perbesar ukuran tombol love */
+    height: 40px; /* Perbesar ukuran tombol love */
+  }
+
+  #heart {
+    width: 20px; /* Perbesar ukuran hati */
+    height: 20px; /* Perbesar ukuran hati */
+  }
+}
+
+/* Style for small screens */
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+
+  #playButton {
+    padding: 0 20px; /* Sesuaikan padding tombol play */
+  }
+
+  #loveButton {
+    width: 35px; /* Perbesar ukuran tombol love */
+    height: 35px; /* Perbesar ukuran tombol love */
+  }
+
+  #heart {
+    width: 18px; /* Perbesar ukuran hati */
+    height: 18px; /* Perbesar ukuran hati */
+  }
+}
